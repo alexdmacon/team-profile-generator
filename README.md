@@ -11,3 +11,5 @@ https://www.npmjs.com/package/path
 https://techblog.topdesk.com/coding/frontend-testing-with-jest-assertions-deep-dive/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
+
+https://jestjs.io/docs/expect#tohavereturned
