@@ -78,66 +78,75 @@ const addAgain = () => {
 };
 
 const addEngineer = () => {
-    inquirer.prompt([
-        {
-            type: "input",
-            name: "name",
-            message: "Enter the employee's name.",
-        },
-        {
-            type: "input",
-            name: "id",
-            message: "Enter the employee's ID number.",
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "Enter the employee's email address.",
-        },
-        {
-            type: "input",
-            name: "github",
-            message: "Enter the engineer's GitHub account name.",
-        },
-    ]).then((answers) => {
-        const engineer = new Engineer(answers.name, answers.id, answers.email, answers.github);
-        team.push(engineer);
-        addAgain();
-    }
-    )
-}
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Enter the employee's name.",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Enter the employee's ID number.",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Enter the employee's email address.",
+      },
+      {
+        type: "input",
+        name: "github",
+        message: "Enter the engineer's GitHub account name.",
+      },
+    ])
+    .then((answers) => {
+      const engineer = new Engineer(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.github
+      );
+      team.push(engineer);
+      addAgain();
+    });
+};
 
 const addIntern = () => {
-    inquirer.prompt([
-        {
-            type: "input",
-            name: "name",
-            message: "Enter the employee's name.",
-        },
-        {
-            type: "input",
-            name: "id",
-            message: "Enter the employee's ID number.",
-        },
-        {
-            type: "input",
-            name: "email",
-            message: "Enter the employee's email address.",
-        },
-        {
-            type: "input",
-            name: "school",
-            message: "Enter the intern's school or recent alma mater.",
-        },
-    ]).then((answers) => {
-        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
-        team.push(intern);
-        addAgain();
-    }
-    )
-}
-
-
-
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Enter the employee's name.",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Enter the employee's ID number.",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Enter the employee's email address.",
+      },
+      {
+        type: "input",
+        name: "school",
+        message: "Enter the intern's school or recent alma mater.",
+      },
+    ])
+    .then((answers) => {
+      const intern = new Intern(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.school
+      );
+      team.push(intern);
+      addAgain();
+    });
+};
 
 addManager();
