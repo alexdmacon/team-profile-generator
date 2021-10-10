@@ -20,13 +20,13 @@ describe("Engineer", () => {
         "JoeBob@fake.com",
         "JoeBobGitHub"
       );
-        expect (engineer.getGithub()).toHaveReturnedWith("JoeBobGitHub");
+      expect(engineer.getGithub()).toHaveReturnedWith("JoeBobGitHub");
     });
   });
 
   describe("getRole", () => {
-      it("should return the role 'Engineer'", () => {
-          expect(engineer.getRole()).toHaveReturnedWith("Engineer");
-      })
-  })
+    it("should return the role 'Engineer'", () => {
+      expect(engineer.getRole()).toHaveReturnedWith("Engineer");
+    });
+  });
 });

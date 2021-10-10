@@ -13,3 +13,5 @@ https://techblog.topdesk.com/coding/frontend-testing-with-jest-assertions-deep-d
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof
 
 https://jestjs.io/docs/expect#tohavereturned
+
+https://developer.mozilla.org/en-US/docs/Glossary/IIFE
