@@ -1,7 +1,7 @@
 const Engineer = require("../lib/Engineer");
 
 describe("Engineer", () => {
-  it("should create an Engineer object inheriting properties and methods of Employee class and setting github value", () => {
+  it("should create an Engineer object inheriting properties and methods of Employee class and setting value of github argument", () => {
     const githubValue = "JoeBobGitHub"
     const engineer = new Engineer(
       "JoeBob",
