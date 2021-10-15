@@ -13,7 +13,7 @@ describe("Employee", () => {
     it("should return employee name from user argument input", () => {
       const employee = new Employee("JoeBob", 42, "JoeBob@fake.com");
 
-      expect(employee.getname()).toHaveReturnedWith("JoeBob");
+      expect(employee.getname()).toEqual("JoeBob");
     });
   });
 
@@ -21,7 +21,7 @@ describe("Employee", () => {
     it("should return employee ID from user argument input", () => {
       const employee = new Employee("JoeBob", 42, "JoeBob@fake.com");
 
-      expect(employee.getId()).toHaveReturnedWith(42);
+      expect(employee.getId()).toEqual(42);
     });
   });
 
@@ -29,7 +29,7 @@ describe("Employee", () => {
     it("should return employee email from user argument input", () => {
       const employee = new Employee("JoeBob", 42, "JoeBob@fake.com");
 
-      expect(employee.getEmail()).toHaveReturnedWith("JoeBob@fake.com");
+      expect(employee.getEmail()).toEqual("JoeBob@fake.com");
     });
   });
 

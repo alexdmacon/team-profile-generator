@@ -10,13 +10,13 @@ describe("Intern", () => {
   describe("getSchool", () => {
     it("should return intern school from user argument input", () => {
       const intern = new Intern("JoeBob", 42, "JoeBob@fake.com", "UNT");
-      expect(intern.getSchool()).toHaveReturnedWith("UNT");
+      expect(intern.getSchool()).toEqual("UNT");
     });
   });
 
   describe("getRole", () => {
     it("should return the role 'Intern'", () => {
-      expect(intern.getRole()).toHaveReturnedWith("Intern");
+      expect(intern.getRole()).toEqual("Intern");
     });
   });
 });

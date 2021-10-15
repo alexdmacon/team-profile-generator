@@ -9,7 +9,7 @@ describe("Manager", () => {
 
   describe("getRole", () => {
     it("should return the role 'Manager'", () => {
-      expect(manager.getRole()).toHaveReturnedWith("Manager");
+      expect(manager.getRole()).toEqual("Manager");
     });
   });
 });
