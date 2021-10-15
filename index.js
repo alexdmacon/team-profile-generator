@@ -13,6 +13,7 @@ const writeHTML = require("./src/writeHTML");
 const team = [];
 
 const createHTML = (fileName, data) => {
+  console.log("The data you're passing to the writeHTML function: ", {...team});
   fs.writeFile("TESTING.HTML", writeHTML({...team}), (err) => {
     if (err) {
       console.log("ERROR: ", err);

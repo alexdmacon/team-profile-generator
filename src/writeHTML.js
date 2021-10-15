@@ -1,5 +1,9 @@
 const writeHTML = (team) => {
-    return `<!DOCTYPE html>
+
+    console.log(`This data made it to the writeHTML function:` , team);
+    console.log(team[0].name);
+
+  return `<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="utf-8" />
@@ -22,16 +26,15 @@ const writeHTML = (team) => {
         </div>
         <div class="container">
           <div class="row justify-content-around">
-          ${team.manager}
+          ${createManager}
         </div>
         </div>
     
       </body>
     </html>
     `;
-} 
- 
- 
+};
+
 const createManager = function (manager) {
   return ` <div class="card m-3" style="width: 18rem">
 <div class="card-header text-white bg-primary">
