@@ -8,13 +8,13 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
-const writeHTML = require("./src/writeHTML");
+const buildTeam = require("./src/buildTeam");
 
 const team = [];
 
 const createHTML = (fileName, data) => {
-  console.log("The data you're passing to the writeHTML function: ", {...team});
-  fs.writeFile("TESTING.HTML", writeHTML({...team}), (err) => {
+  console.log("The data you're passing to the writeHTML function: ", team);
+  fs.writeFile("TESTING.HTML", buildTeam(team), (err) => {
     if (err) {
       console.log("ERROR: ", err);
     } else {
@@ -86,7 +86,6 @@ const addAgain = () => {
       } else {
         createHTML();
       }
-      //need to write something here that will not just return but write file/generate HTML with whatever we've inputted to this point. I guess this is where we'll call a write FS function eventually.
     });
   // console.log(team);
 };
