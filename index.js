@@ -12,6 +12,16 @@ const writeHTML = require("./src/writeHTML");
 
 const team = [];
 
+const createHTML = (fileName, data) => {
+  fs.writeFile("TESTING.HTML", writeHTML({...team}), (err) => {
+    if (err) {
+      console.log("ERROR: ", err);
+    } else {
+      console.log("Creating team page.");
+    }
+  });
+};
+
 const addManager = () => {
   inquirer
     .prompt([
@@ -73,11 +83,11 @@ const addAgain = () => {
       } else if (answer === "Add Intern") {
         addIntern();
       } else {
-        return;
-        //need to write something here that will not just return but write file/generate HTML with whatever we've inputted to this point. I guess this is where we'll call a write FS function eventually.
+        createHTML();
       }
+      //need to write something here that will not just return but write file/generate HTML with whatever we've inputted to this point. I guess this is where we'll call a write FS function eventually.
     });
-    // console.log(team);
+  // console.log(team);
 };
 
 const addEngineer = () => {
