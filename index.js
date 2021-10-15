@@ -75,6 +75,7 @@ const addAgain = () => {
         //need to write something here that will not just return but write file/generate HTML with whatever we've inputted to this point. I guess this is where we'll call a write FS function eventually.
       }
     });
+    // console.log(team);
 };
 
 const addEngineer = () => {

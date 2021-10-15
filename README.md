@@ -15,3 +15,5 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/inst
 https://jestjs.io/docs/expect#tohavereturned
 
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+
+https://getbootstrap.com/docs/4.0/components/card/
