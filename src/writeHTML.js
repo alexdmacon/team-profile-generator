@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+`<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,22 +24,25 @@
         <!--cards will go here-->
 
         
-        <div class="card m-3" style="width: 18rem">
-          <div class="card-header text-white bg-primary">
-            <h2></h2>
-            <h3></h3>
-          
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div>
-        
+
         
     </div>
     </div>
 
   </body>
 </html>
+`;
+
+const createManager = function (manager) {
+  return ` <div class="card m-3" style="width: 18rem">
+<div class="card-header text-white bg-primary">
+  <h2>Manager</h2>
+  <h3>${manager.name}</h3>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">ID: ${manager.id}</li>
+  <li class="list-group-item">Email: ${manager.officeNumber}</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
+</div>`;
+};
