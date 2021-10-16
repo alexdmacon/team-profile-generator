@@ -30,9 +30,9 @@ const buildTeam = (team) => {
 
 const buildManager = (manager) => {
   return ` <div class="card m-3" style="width: 18rem">
-<div class="card-header bg-info">
-  <h2>Manager</h2>
-  <h3>${manager.getName()}</h3>
+<div class="card-header-1">
+  <h4>Manager</h4>
+  <h2>${manager.getName()}</h2>
 </div>
 <ul class="list-group list-group-flush">
   <li class="list-group-item">ID: ${manager.getId()}</li>
@@ -44,9 +44,9 @@ const buildManager = (manager) => {
 
 const buildEngineer = (engineer) => {
   return ` <div class="card m-3" style="width: 18rem">
-    <div class="card-header bg-info">
-      <h2>Engineer</h2>
-      <h3>${engineer.getName()}</h3>
+    <div class="card-header-2">
+      <h4>Engineer</h4>
+      <h2>${engineer.getName()}</h2>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${engineer.getId()}</li>
@@ -58,9 +58,9 @@ const buildEngineer = (engineer) => {
 
 const buildIntern = (intern) => {
   return ` <div class="card m-3" style="width: 18rem">
-    <div class="card-header bg-info">
-      <h2>Intern</h2>
-      <h3>${intern.getName()}</h3>
+    <div class="card-header-3">
+      <h4>Intern</h4>
+      <h2>${intern.getName()}</h2>
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">ID: ${intern.getId()}</li>
@@ -89,7 +89,7 @@ const writeHTML = (cards) => {
         <title>Your Team's Profile</title>
       </head>
       <body class="background">
-        <div class="container-fluid jumbotron bg-primary">
+        <div class="container-fluid jumbotron header">
           <h1 class="text-center">The Best Team in the World</h1>
         </div>
         <div class="container">

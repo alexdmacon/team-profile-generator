@@ -1,18 +1,43 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2 {
+    font-weight: bolder;
+}
+
+h4 {
+    font-style: italic;
+}
+
 .background {
-    background-color:#600473;
+    background-color:  #005995;
 }
 
 .header {
-    background-color: #005995;
-    color: black;
+    background-color:    #600473;
+    color: whitesmoke;
 }
 
 .list-group-item {
-    background-color:#fbf579;
+    background-color:whitesmoke;
     color: black;
 }
 
-.card-header {
+.card-header-1 {
     background-color:#fa625f;
     color: black;
+    padding:10px
+}
+
+.card-header-2 {
+    background-color:  #fbf579;
+    color: black;
+    padding:10px;
+}
+
+.card-header-3 {
+    background-color: #600473;
+    color: whitesmoke;
+    padding:10px
 }
