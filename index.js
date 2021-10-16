@@ -13,8 +13,8 @@ const buildTeam = require("./src/buildTeam");
 const team = [];
 
 const createHTML = (fileName, data) => {
-  console.log("The data you're passing to the writeHTML function: ", team);
-  fs.writeFile("TESTING.HTML", buildTeam(team), (err) => {
+  // console.log("The data you're passing to the buildTeam function: ", team);
+  fs.writeFile("./dist/index.html", buildTeam(team), (err) => {
     if (err) {
       console.log("ERROR: ", err);
     } else {
