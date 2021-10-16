@@ -6,9 +6,9 @@ This is a Node.js command-line application meant to help the user create an HTML
 
 I developed it primarily to get some more experience with back-end technologies and with unit testing for JavaScript, and to practice working with JavaScript classes. To that end, this app uses several NPM packages, including Inquirer to collect user input, Jest to run tests, and the fs module to write it all down. The HTML was styled using the Bootstrap framework.
 
-[Here's a link to a video demo showing how it works]()
+[Here's a link to a video demo showing how it works](https://drive.google.com/file/d/1OWBAl9GYYS-hdfTOtBXVzt536TPGmbnb/view)
 
-![gif]()
+![gif](assets/team-profile-generator.gif)
 
 ## Table of Contents
 
@@ -25,7 +25,7 @@ Download the code off of this GitHub repo. From the command line, initialize npm
 
 From the command line, navigate to downloaded team-profile-generator folder and enter "node index.js" to run the app. Follow the prompts from there. At the time I am writing this README, I have not added validation to check user input, so please be on your best behavior and try to stick to the appropriate format implied by the questions. If I have time later, I will fix this. Anyway, the HTML file will write to the "dist" folder when you're done.
 
-![README screenshot](images/readme-screenshot.png)
+![team profile generator screenshot](assets/team-profile-generator.png)
 
 ## Credits
 
