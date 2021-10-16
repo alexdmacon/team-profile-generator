@@ -1,20 +1,27 @@
+// importing npm packages we need
 const inquirer = require("inquirer");
 const fs = require("fs");
 const jest = require("jest");
 const path = require("path");
 
+// importing created classes
 const Employee = require("./lib/Employee");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 
+// importing buildTeam function from the src folder, which contains the HTML templates we ultimately want to generate with the data we'll collect using inquirer.
 const buildTeam = require("./src/buildTeam");
 
+// creating an array to which we'll push the new employee objects we're going to create based on user input from inquirer
 const team = [];
 
+// this will be called after we collect data via all the add functions below. Arguments here assign a file name (and path), and the data we'll use to create HTML.
 const createHTML = (fileName, data) => {
-  // console.log("The data you're passing to the buildTeam function: ", team);
+
+  // will create a file titled "index.html" in the dist folder and call buildTeam function that passes through the "team" array filled with newly created employee classes.
   fs.writeFile("./dist/index.html", buildTeam(team), (err) => {
+    // catches errors, will log on terminal backend.
     if (err) {
       console.log("ERROR: ", err);
     } else {
@@ -23,7 +30,10 @@ const createHTML = (fileName, data) => {
   });
 };
 
+// this is the first function called when user initializes index.js. assumes every team will have a manager.
 const addManager = () => {
+
+  // uses inquirer package to collect user input on team members.
   inquirer
     .prompt([
       {
@@ -47,6 +57,7 @@ const addManager = () => {
         message: "Please enter the manager's office phone number.",
       },
     ])
+    // creates new Manager object using user's answers.
     .then((answers) => {
       const manager = new Manager(
         answers.name,
@@ -54,15 +65,18 @@ const addManager = () => {
         answers.email,
         answers.officeNumber
       );
-
+      // pushes object to the team array.
       team.push(manager);
 
+      // calls another function using inquirer.
       addAgain();
     });
 };
 
 const addAgain = () => {
   inquirer
+
+  // first question after manager object is created will either lead to more questions, or, if user answers "no more employees", call the createHTML function to create the page based on what input we already have.
     .prompt([
       {
         type: "list",
@@ -162,4 +176,5 @@ const addIntern = () => {
     });
 };
 
+// calls addManager() to kick everything off.
 addManager();

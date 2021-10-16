@@ -17,3 +17,7 @@ https://jestjs.io/docs/expect#tohavereturned
 https://developer.mozilla.org/en-US/docs/Glossary/IIFE
 
 https://getbootstrap.com/docs/4.0/components/card/
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends

@@ -1,6 +1,10 @@
+// passing through "team" array created using inquirer over on index.js.
 const buildTeam = (team) => {
+
+  // creates new array to store HTML cards being created in this script.
   cardArray = [];
 
+  // for loop that cycles through "team" array to match employee objects with corresponding card creation function. pushes those newly created HTML cards into the cardArray. There must be a cleaner way to write this using .map and .forEach methods, which I will try and figure out later when I have more time.
   for (let i = 0; i < team.length; i++) {
     const employee = team[i];
     const role = employee.getRole();
@@ -23,11 +27,16 @@ const buildTeam = (team) => {
       cardArray.push(intern);
     }
   }
+
+  // takes objects containing individual HTML cards in array and concatenates them into one string, which will be easier to place in HTML for main page.
   const cards = cardArray.join("");
 
+  // passes that string of HTML cards into the writeHTML function, which will do what it sounds like it's going to do.
   return writeHTML(cards);
 };
 
+
+// next few functions create employee cards using data passed from buildTeam().
 const buildManager = (manager) => {
   return ` <div class="card m-3" style="width: 18rem">
 <div class="card-header-1">
@@ -70,6 +79,8 @@ const buildIntern = (intern) => {
     </div>`;
 };
 
+
+// template for the HTML that will generate our final team page.
 const writeHTML = (cards) => {
   return `<!DOCTYPE html>
     <html lang="en">
@@ -108,4 +119,5 @@ const writeHTML = (cards) => {
     `;
 };
 
+// exports the buildTeam function, which we'll need over on index.js
 module.exports = buildTeam;
