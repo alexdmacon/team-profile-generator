@@ -23,7 +23,7 @@ Download the code off of this GitHub repo. From the command line, initialize npm
 
 ## Usage
 
-From the command line, navigate to downloaded team-profile-generator folder and enter "node index.js" to run the app. Follow the prompts from there. At the time I am writing this README, I have not added validation to check user input, so please be on your best behavior and try to stick to the appropriate format implied by the questions. If I have time later, I will fix this. Anyway, the HTML file will write to the "dist" folder when you're done.
+From the command line, navigate to downloaded team-profile-generator folder and enter "node index.js" to run the app. Follow the prompts from there. At the time I am writing this README, I have not added validation to check user input, so please be on your best behavior and try to stick to the appropriate format implied by the questions. If I have time later, I will fix this. For now, the HTML file will write to the "dist" folder when you're done.
 
 ![team profile generator screenshot](assets/team-profile-generator.png)
 
